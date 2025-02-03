@@ -1,7 +1,12 @@
 <?php
 require_once __DIR__ . '/../src/ResumeData.php';
 include 'includes/header.php';
+?>
 
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<?php
 $resume = new ResumeData();
 ?>
 
@@ -10,7 +15,7 @@ $resume = new ResumeData();
     <p><?php echo ResumeData::getSummary(); ?></p>
 </section>
 
-<section id="skills">
+<section id="skills" class="skills">
     <h2>Skills</h2>
     <?php
     $skills = ResumeData::getSkills();
@@ -29,17 +34,18 @@ $resume = new ResumeData();
     <?php
     $experience = ResumeData::getExperience();
     foreach ($experience as $job) {
+        echo "<div class='experience-card'>";
         echo "<h3>{$job['position']} at {$job['company']}</h3>";
         echo "<p><strong>{$job['duration']}</strong> - {$job['location']}</p><ul>";
         foreach ($job['description'] as $desc) {
             echo "<li>$desc</li>";
         }
-        echo "</ul>";
+        echo "</ul></div>";
     }
     ?>
 </section>
 
-<section id="education">
+<section id="education" class="education">
     <h2>Education</h2>
     <ul>
         <?php
