@@ -1,9 +1,19 @@
 function openModal(img) {
     const modal = document.getElementById('imageModal');
     const modalImg = document.getElementById('modalImage');
+    const modalCaption = document.getElementById('modalCaption');
+    
     modal.style.display = 'flex';
     modalImg.src = img.src;
     modalImg.alt = img.alt;
+    
+    // Set caption based on image
+    if (img.classList.contains('profile-image')) {
+        modalCaption.textContent = 'Bryce Canyon, 2024';
+    } else if (img.classList.contains('barista-image')) {
+        modalCaption.textContent = 'Opening Rowhome 2, 2023';
+    }
+    
     modal.classList.add('show');
 }
 

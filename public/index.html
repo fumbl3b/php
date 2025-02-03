@@ -11,7 +11,10 @@
     <!-- Add modal structure at top of body -->
     <div id="imageModal" class="modal">
         <span class="close-modal">&times;</span>
-        <img src="" alt="" class="modal-content" id="modalImage">
+        <div class="modal-container">
+            <img src="" alt="" class="modal-content" id="modalImage">
+            <div class="modal-caption" id="modalCaption"></div>
+        </div>
     </div>
     <header>
         <div class="header-content">
@@ -29,6 +32,7 @@
                 <a href="#skills">Skills</a>
                 <a href="#experience">Experience</a>
                 <a href="#education">Education</a>
+                <a href="#contact">Contact</a>
             </nav>
         </div>
     </header>
@@ -51,21 +55,223 @@
 
         <section id="skills" class="skills">
             <h2>Skills</h2>
-            <h3>Programming Languages</h3><ul><li>Kotlin</li><li>Java</li><li>XML</li><li>Javascript (ES6)</li><li>TypeScript</li><li>Python</li><li>HTML5</li><li>CSS</li><li>Bash</li><li>C#</li><li>Swift</li></ul><h3>Frameworks</h3><ul><li>Android SDK</li><li>.NET Core</li><li>React</li><li>Angular</li><li>Node</li><li>Vue.js</li><li>jQuery</li><li>Next</li><li>Tailwind</li><li>Express</li><li>Django</li></ul><h3>Database/Cloud</h3><ul><li>Oracle</li><li>PostgreSQL</li><li>SQLite</li><li>MongoDB</li><li>GraphQL</li><li>Redis</li><li>AWS</li><li>Kubernetes</li><li>Heroku</li><li>Vercel</li><li>Docker</li></ul><h3>APIs and Libraries</h3><ul><li>RESTful APIs</li><li>Picasso</li><li>Glide</li><li>Dagger2</li><li>Hilt</li><li>RxJava</li><li>Lodash</li><li>Kafka</li><li>Hibernate</li></ul><h3>Project Tools</h3><ul><li>Git</li><li>Github</li><li>Teams</li><li>Bitbucket</li><li>SonarQube</li><li>Crashlytics</li><li>JIRA</li><li>Trello</li><li>Slack</li><li>Confluence</li><li>InVision</li><li>Figma</li><li>Jenkins</li><li>Postman</li></ul><h3>IDE</h3><ul><li>Android Studio</li><li>Intellij IDEA</li><li>Eclipse</li><li>VS Code</li><li>vim</li></ul>        </section>
+            <h3>Programming Languages</h3>
+            <ul>
+                <li>Kotlin</li>
+                <li>Java</li>
+                <li>XML</li>
+                <li>Javascript (ES6)</li>
+                <li>TypeScript</li>
+                <li>Python</li>
+                <li>HTML5</li>
+                <li>CSS</li>
+                <li>Bash</li>
+                <li>C#</li>
+                <li>Swift</li>
+            </ul>
+            <h3>Frameworks</h3>
+            <ul>
+                <li>Android SDK</li>
+                <li>.NET Core</li>
+                <li>React</li>
+                <li>Angular</li>
+                <li>Node</li>
+                <li>Vue.js</li>
+                <li>jQuery</li>
+                <li>Next</li>
+                <li>Tailwind</li>
+                <li>Express</li>
+                <li>Django</li>
+            </ul>
+            <h3>Database/Cloud</h3>
+            <ul>
+                <li>Oracle</li>
+                <li>PostgreSQL</li>
+                <li>SQLite</li>
+                <li>MongoDB</li>
+                <li>GraphQL</li>
+                <li>Redis</li>
+                <li>AWS</li>
+                <li>Kubernetes</li>
+                <li>Heroku</li>
+                <li>Vercel</li>
+                <li>Docker</li>
+            </ul>
+            <h3>APIs and Libraries</h3>
+            <ul>
+                <li>RESTful APIs</li>
+                <li>Picasso</li>
+                <li>Glide</li>
+                <li>Dagger2</li>
+                <li>Hilt</li>
+                <li>RxJava</li>
+                <li>Lodash</li>
+                <li>Kafka</li>
+                <li>Hibernate</li>
+            </ul>
+            <h3>Project Tools</h3>
+            <ul>
+                <li>Git</li>
+                <li>Github</li>
+                <li>Teams</li>
+                <li>Bitbucket</li>
+                <li>SonarQube</li>
+                <li>Crashlytics</li>
+                <li>JIRA</li>
+                <li>Trello</li>
+                <li>Slack</li>
+                <li>Confluence</li>
+                <li>InVision</li>
+                <li>Figma</li>
+                <li>Jenkins</li>
+                <li>Postman</li>
+            </ul>
+            <h3>IDE</h3>
+            <ul>
+                <li>Android Studio</li>
+                <li>Intellij IDEA</li>
+                <li>Eclipse</li>
+                <li>VS Code</li>
+                <li>vim</li>
+            </ul>
+        </section>
 
         <section id="experience">
             <h2>Experience</h2>
-            <div class='experience-card'><h3>Software Engineer II at JP Morgan Chase & Co</h3><p><strong>Aug 2023 - June 2024</strong> - Wilmington, DE</p><ul><li>Worked closely with a small team maintaining 20 internal services for managing structured data.</li><li>Maintained and enhanced legacy Java applications, ensuring robust performance.</li><li>Developed and implemented new features in Spring Boot and React.</li><li>Conducted unit and integration testing to ensure software reliability.</li><li>Optimized product quality through code reviews and refactoring.</li></ul></div><div class='experience-card'><h3>Android Developer at Wells Fargo</h3><p><strong>Dec 2021 - Jul 2023</strong> - San Francisco, CA / Remote</p><ul><li>Contributed to the full redevelopment of the Android application.</li><li>Monitored performance and crash reports for a live app with 10M+ downloads.</li><li>Implemented deep linking for user-friendly navigation.</li><li>Collaborated with design and business teams to launch new features.</li></ul></div>        </section>
+        
+            <div class="experience-card">
+                <div class="experience-header">
+                    <div class="company-logo">
+                        <img src="/img/jpmc.png" alt="JP Morgan Chase logo" class="company-logo-img">
+                    </div>
+                    <div class="experience-info">
+                        <h3>Software Engineer II => JP Morgan Chase & Co</h3>
+                        <p><strong>Aug 2023 - June 2024</strong> - Wilmington, DE</p>
+                    </div>
+                </div>
+                <ul>
+                    <li>Worked closely with a small team maintaining structured data.</li>
+                    <li>Maintained and enhanced legacy Java applications, ensuring robust performance.</li>
+                    <li>Developed and implemented new features in Spring Boot and React.</li>
+                    <li>Conducted unit and integration testing to ensure software reliability.</li>
+                    <li>Optimized product quality through code reviews and refactoring.</li>
+                    <li>Ensured load balancing and security vulnerability testing in legacy systems.</li>
+                    <li>Actively participated in Scrum ceremonies, including sprint planning, retrospectives, and daily stand-ups.</li>
+                    <li>Collaborated closely with business stakeholders across multiple lines of business to align development with requirements.</li>
+                    <li>Managed CI pipelines, enforcing remote testing, code quality, and coverage rules prior to deployment.</li>
+                </ul>
+            </div>
+        
+            <div class="experience-card">
+                <div class="experience-header">
+                    <div class="company-logo">
+                        <img src="/img/wells.png" alt="Wells Fargo logo" class="company-logo-img">
+                    </div>
+                    <div class="experience-info">
+                        <h3>Android Developer => Wells Fargo</h3>
+                        <p><strong>Dec 2021 - Jul 2023</strong> - San Francisco, CA / Remote</p>
+                    </div>
+                </div>
+                <ul>
+                    <li>Contributed to the full redevelopment of the Android application.</li>
+                    <li>Monitored performance and crash reports for a live app with 10M+ downloads.</li>
+                    <li>Implemented deep linking for user-friendly navigation.</li>
+                    <li>Collaborated with design and business teams to launch new features.</li>
+                    <li>Interfaced with device contacts and Zelle API to enable a 'ready to transfer' feature.</li>
+                    <li>Launched the new LifeSync financial planning tool, providing users with a dashboard and live investment data.</li>
+                </ul>
+            </div>
+        
+            <div class="experience-card">
+                <div class="experience-header">
+                    <div class="company-logo">
+                        <img src="/img/android.png" alt="Android logo" class="company-logo-img">
+                    </div>
+                    <div class="experience-info">
+                        <h3>Android Developer => Rave Business Systems</h3>
+                        <p><strong>Aug 2021 - Dec 2021</strong> - Philadelphia, PA</p>
+                    </div>
+                </div>
+                <ul>
+                    <li>Developed Android applications using Kotlin, Java, and React Native.</li>
+                    <li>Implemented Jetpack architecture components including Compose, ViewModel, LiveData, DataStore, RoomDB, Navigation Component, and others.</li>
+                </ul>
+            </div>
+        
+            <div class="experience-card">
+                <div class="experience-header">
+                    <div class="company-logo">
+                        <img src="/img/pathrise.png" alt="Pathrise logo" class="company-logo-img">
+                    </div>
+                    <div class="experience-info">
+                        <h3>Software Engineer => Pathrise</h3>
+                        <p><strong>May 2021 - Aug 2021</strong> - New York, NY / Remote</p>
+                    </div>
+                </div>
+                <ul>
+                    <li>Engineered and deployed scalable full-stack web applications using React, Node.js, and MongoDB.</li>
+                    <li>Collaborated with cross-functional teams to define project scopes and requirements.</li>
+                    <li>Performed debugging and maintenance for existing applications.</li>
+                    <li>Contributed to the development and documentation for RESTful API services.</li>
+                </ul>
+            </div>
+            
+            <div class="experience-card">
+                <div class="experience-header">
+                    <div class="company-logo">
+                        <img src="/img/saxbys.png" alt="Saxbys logo" class="company-logo-img">
+                    </div>
+                    <div class="experience-info">
+                        <h3>Head of Coffee Education => Saxbys</h3>
+                        <p><strong>Jun 2019 - May 2020</strong> - Greater Philadelphia Area</p>
+                    </div>
+                </div>
+                <ul>
+                    <li>Updated standards and practices for implementation of a new coffee program across all branded cafes.</li>
+                    <li>Led new coffee product R+D and wholesale program development.</li>
+                    <li>Managed quality assurance at both production and retail levels.</li>
+                </ul>
+            </div>
+
+            <div class="experience-card">
+                <div class="experience-header">
+                    <div class="company-logo">
+                        <img src="/img/lacolombe.png" alt="La Colombe Coffee Roasters logo" class="company-logo-img">
+                    </div>
+                    <div class="experience-info">
+                        <h3>Data Ops, Design, Training, Quality Assurance, Production => La Colombe Coffee Roasters</h3>
+                        <p><strong>2014 - 2019</strong> - Philadelphia, PA / Chicago, IL</p>
+                    </div>
+                </div>
+                <ul>
+                    <li>Designed and implemented a comprehensive data management system to enhance coffee quality control.</li>
+                    <li>Developed automated data pipelines for large datasets related to coffee quality and sales.</li>
+                    <li>Created user-friendly dashboards for real-time insights.</li>
+                    <li>Led integration of the data management system with existing IT infrastructure.</li>
+                    <li>Managed the satellite Chicago Roasting operation.</li>
+                </ul>
+            </div>
+        
+            
+        </section>
 
         <section id="education" class="education">
             <h2>Education</h2>
             <ul>
-            <li>Temple University - Computer Science (Present)</li><li>Thinkful - Full Stack Software Engineering Certificate (Sept 2020 - Jan 2021)</li><li>Washington University in St. Louis - Art History (2009 - 2010)</li><li>Lower Merion High School -  (2009)</li>            </ul>
+                <li>Temple University - BS Computer Science (Present)</li>
+                <li>Thinkful - Full Stack Software Engineering Certificate (Sept 2020 - Jan 2021)</li>
+                <li>Washington University in St. Louis (2009 - 2010)</li>
+                <li>Lower Merion High School - (2009)</li>
+            </ul>
         </section>
 
         <section id="contact">
             <h2>Contact</h2>
-            <p>Email: <a href='mailto:harry@fumblebee.site'>harry@fumblebee.site</a></p><p>LinkedIn: <a href='https://linkedin.com/in/harry-winkler'>linkedin.com/in/harry-winkler</a></p>        </section>
+            <div class="contact-info">
+                <p><strong>Email:</strong> <a href="mailto:harry@fumblebee.site">harry@fumblebee.site</a></p>
+                <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/harry-winkler" target="_blank">linkedin.com/in/harry-winkler</a></p>
+            </div>
+        </section>
     </main>
     <script src="/js/main.js"></script>
 </body>
