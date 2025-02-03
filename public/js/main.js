@@ -79,4 +79,28 @@ document.addEventListener('DOMContentLoaded', () => {
             hamburger.classList.remove('active');
         }
     });
+    
+    initCarousel();
 });
+
+function initCarousel() {
+    const track = document.querySelector('.carousel-track');
+    const prev = document.querySelector('.carousel-button.prev');
+    const next = document.querySelector('.carousel-button.next');
+    const images = track.querySelectorAll('img');
+    let currentIndex = 0;
+
+    function updateTrack() {
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    prev.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        updateTrack();
+    });
+
+    next.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        updateTrack();
+    });
+}
