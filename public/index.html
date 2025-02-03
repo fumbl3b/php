@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harry Winkler - Portfolio</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Add modal structure at top of body -->
+    <div id="imageModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img src="" alt="" class="modal-content" id="modalImage">
+    </div>
+    <header>
+        <div class="header-content">
+            <div class="profile-section">
+                <img src="/img/profile.jpg" alt="Harry Winkler" class="profile-image" onclick="openModal(this)">
+                <h1>Harry Winkler</h1>
+            </div>
+            <button class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#education">Education</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="about">
+            <div class="about-container">
+                <div class="about-content">
+                    <h2>About Me</h2>
+                    <p>Proficient Software Engineer versed in designing, developing, and maintaining both mobile and web applications. 
+                    Extensive experience deploying and maintaining cloud services. Skilled in Java, Kotlin, Javascript ES6, 
+                    Typescript and Python. Experience with Test-Driven-Development, ADA Accessible UI implementation, 
+                    continuous integration tools, and agile software development methodologies.</p>
+                </div>
+                <div class="about-image">
+                    <img src="/img/barista.jpg" alt="Harry as a barista" class="barista-image" onclick="openModal(this)">
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills">
+            <h2>Skills</h2>
+            <h3>Programming Languages</h3><ul><li>Kotlin</li><li>Java</li><li>XML</li><li>Javascript (ES6)</li><li>TypeScript</li><li>Python</li><li>HTML5</li><li>CSS</li><li>Bash</li><li>C#</li><li>Swift</li></ul><h3>Frameworks</h3><ul><li>Android SDK</li><li>.NET Core</li><li>React</li><li>Angular</li><li>Node</li><li>Vue.js</li><li>jQuery</li><li>Next</li><li>Tailwind</li><li>Express</li><li>Django</li></ul><h3>Database/Cloud</h3><ul><li>Oracle</li><li>PostgreSQL</li><li>SQLite</li><li>MongoDB</li><li>GraphQL</li><li>Redis</li><li>AWS</li><li>Kubernetes</li><li>Heroku</li><li>Vercel</li><li>Docker</li></ul><h3>APIs and Libraries</h3><ul><li>RESTful APIs</li><li>Picasso</li><li>Glide</li><li>Dagger2</li><li>Hilt</li><li>RxJava</li><li>Lodash</li><li>Kafka</li><li>Hibernate</li></ul><h3>Project Tools</h3><ul><li>Git</li><li>Github</li><li>Teams</li><li>Bitbucket</li><li>SonarQube</li><li>Crashlytics</li><li>JIRA</li><li>Trello</li><li>Slack</li><li>Confluence</li><li>InVision</li><li>Figma</li><li>Jenkins</li><li>Postman</li></ul><h3>IDE</h3><ul><li>Android Studio</li><li>Intellij IDEA</li><li>Eclipse</li><li>VS Code</li><li>vim</li></ul>        </section>
+
+        <section id="experience">
+            <h2>Experience</h2>
+            <div class='experience-card'><h3>Software Engineer II at JP Morgan Chase & Co</h3><p><strong>Aug 2023 - June 2024</strong> - Wilmington, DE</p><ul><li>Worked closely with a small team maintaining 20 internal services for managing structured data.</li><li>Maintained and enhanced legacy Java applications, ensuring robust performance.</li><li>Developed and implemented new features in Spring Boot and React.</li><li>Conducted unit and integration testing to ensure software reliability.</li><li>Optimized product quality through code reviews and refactoring.</li></ul></div><div class='experience-card'><h3>Android Developer at Wells Fargo</h3><p><strong>Dec 2021 - Jul 2023</strong> - San Francisco, CA / Remote</p><ul><li>Contributed to the full redevelopment of the Android application.</li><li>Monitored performance and crash reports for a live app with 10M+ downloads.</li><li>Implemented deep linking for user-friendly navigation.</li><li>Collaborated with design and business teams to launch new features.</li></ul></div>        </section>
+
+        <section id="education" class="education">
+            <h2>Education</h2>
+            <ul>
+            <li>Temple University - Computer Science (Present)</li><li>Thinkful - Full Stack Software Engineering Certificate (Sept 2020 - Jan 2021)</li><li>Washington University in St. Louis - Art History (2009 - 2010)</li><li>Lower Merion High School -  (2009)</li>            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: <a href='mailto:harry@fumblebee.site'>harry@fumblebee.site</a></p><p>LinkedIn: <a href='https://linkedin.com/in/harry-winkler'>linkedin.com/in/harry-winkler</a></p>        </section>
+    </main>
+    <script src="/js/main.js"></script>
+</body>
+</html>

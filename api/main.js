@@ -1,9 +1,8 @@
-function openModal(img) {
+function openModal() {
     const modal = document.getElementById('imageModal');
-    const modalImg = document.getElementById('modalImage');
     modal.style.display = 'flex';
-    modalImg.src = img.src;
-    modalImg.alt = img.alt;
+    // Force reflow
+    modal.offsetHeight;
     modal.classList.add('show');
 }
 
@@ -15,38 +14,28 @@ function toggleMenu() {
     nav.classList.toggle('active');
 }
 
-// Close menu when clicking outside
-document.addEventListener('click', (e) => {
-    const nav = document.querySelector('nav');
-    const hamburger = document.querySelector('.hamburger');
-    if (nav.classList.contains('active') && 
-        !nav.contains(e.target) && 
-        !hamburger.contains(e.target)) {
-        nav.classList.remove('active');
-        hamburger.classList.remove('active');
-    }
-});
-
 document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('imageModal');
     const closeBtn = document.querySelector('.close-modal');
 
-    closeBtn.onclick = () => {
+    function closeModal() {
         modal.classList.remove('show');
-        setTimeout(() => modal.style.display = 'none', 300);
-    };
+        setTimeout(() => {
+            modal.style.display = 'none';
+        }, 300);
+    }
 
+    closeBtn.onclick = closeModal;
+    
     window.onclick = (e) => {
         if (e.target === modal) {
-            modal.classList.remove('show');
-            setTimeout(() => modal.style.display = 'none', 300);
+            closeModal();
         }
-    };
-
+    }
+    
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modal.classList.contains('show')) {
-            modal.classList.remove('show');
-            setTimeout(() => modal.style.display = 'none', 300);
+        if (e.key === 'Escape') {
+            closeModal();
         }
     });
 
