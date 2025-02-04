@@ -463,6 +463,26 @@ main {
 }
 
 .project-links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.project-links a {
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.project-links a:first-child {
+    background: #333;
+    color: white;
+}
+
+.project-links {
     margin-top: auto;
     display: flex;
     gap: 1rem;
@@ -575,17 +595,52 @@ main {
     border-radius: 25px;
     text-decoration: none;
     font-weight: 600;
-    margin-left: 15px;
+    margin-left: 0; /* Remove if exists */
     transition: all 0.3s ease;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    color: white !important; /* Override any inherited colors */
 }
 
 .try-it-button:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     background: linear-gradient(45deg, #1976D2, #0097A7);
+    color: white !important;
 }
 
 .try-it-button:active {
     transform: translateY(0);
+}
+
+.projects-container {
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+.project-card {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.project-info p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.carousel-container {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.carousel-track {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.carousel-image {
+    max-width: 100%;
+    height: auto;
 }
